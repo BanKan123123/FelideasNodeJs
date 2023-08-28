@@ -1,0 +1,32 @@
+<div class='mt4 pd-fr'>
+    <h2>Khóa học của tôi</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Name</th>
+                <th scope="col">Level</th>
+                <th scope="col">Thời gian tạo</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each felidaes}}
+            <tr>
+                <th scope="row"> {{sum @index 1}} </th>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td><img src="{{this.image}}" alt="{{this.name}}" class="size-sm-img" /></td>
+
+                <td><button type="button" class="btn btn-success"><a href="/felidaes/{{this._id}}/edit">Edit</a></button>
+                </td>
+                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#modalConfirmDeleteCourse" data-id="{{this._id}}"><a
+                            href="#">Delete</a></button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+<div class="home pd-fr">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {{#each felidaes}}
+        <div class="col">
+            <div class="card h-100">
+                <a href="/felidaes/{{this.slug}}"><img src="{{this.image}}" class="card-img-top"
+                        alt="{{this.name}}"></a>
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">View details</small>
+                </div>
+            </div>
+        </div>
+        {{/each }}
+    </div>
+</div>

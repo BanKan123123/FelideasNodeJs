@@ -1,0 +1,20 @@
+<div class="mt4 home-card pd-fr">
+
+    <h1>Edit Felidae</h1>
+
+    <form method="POST" action="/felidaes/{{felidae._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name Felidea</label>
+            <input name="name" type="text" class="form-control" id="name" value="{{felidae.name}}">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" name="description" value="{{felidae.description}}">
+        </div>
+        <div class="mb-3">
+            <label for="videoId" class="form-label">Video Id</label>
+            <input type="text" class="form-control" id="videoId" name="videoId" value="{{felidae.videoId}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Edit Felidae</button>
+    </form>
+</div>
